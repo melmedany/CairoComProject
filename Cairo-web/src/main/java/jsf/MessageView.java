@@ -39,6 +39,6 @@ public class MessageView {
      
      public String postMessage() {
         this.newsEntityFacade.create(NewsEntity);
-        return "theend";
+        return "theendTemplate";
     }
 }
