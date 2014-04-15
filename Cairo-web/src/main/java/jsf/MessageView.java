@@ -58,8 +58,8 @@ public class MessageView implements Serializable{
 	static{
 		countries = new LinkedHashMap<String,Object>();
 		countries.put("English", Locale.ENGLISH); //label, value
-		countries.put("عربي",new Locale("ar", "EG"));
-                //countries.put("french", new Locale)
+		countries.put("عربي",new Locale("ar","EG"));
+                //countries.put("french", new Locale("ar"));
 	}
 
 	public Map<String, Object> getCountriesInMap() {
