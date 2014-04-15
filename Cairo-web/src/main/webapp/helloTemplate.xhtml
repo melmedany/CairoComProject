@@ -23,6 +23,26 @@
                         <h:outputLabel value="Message:"/><h:inputText value="#{MessageView.message.body}"/>
                         <h:commandButton action="#{MessageView.postMessage}" value="Post Message"/>
                     </h:form>
+                    
+                    <h:form>
+			
+			<h3>
+				<h:outputText value="#{asd['text']}" />
+			</h3>
+			
+			<h:panelGrid columns="2">
+				
+				Language : 
+				<h:selectOneMenu value="#{MessageView.localeCode}" onchange="submit()"
+					valueChangeListener="#{MessageView.countryLocaleCodeChanged}">
+   					<f:selectItems value="#{MessageView.countriesInMap}" /> 
+   				</h:selectOneMenu>
+
+			</h:panelGrid>
+			
+			
+			
+		</h:form>
                 </f:view>
             </ui:define>
 
