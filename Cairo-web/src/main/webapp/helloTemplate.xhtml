@@ -3,7 +3,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      template="/WEB-INF/template.xhtml">
+    <head>
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <h:outputStylesheet library="css" name="bootstrap.css" />
+        <script src="js/bootstrap.js"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"/>
+    </head>
 
     <body>
 
@@ -18,32 +25,99 @@
             </ui:define>
 
             <ui:define name="content">
+
+                <div class="page-header">
+                    <h1>This is my First Page With Bootstrap <small>Wellcome !!!</small></h1>
+                </div>
+
+
                 <f:view>
                     <h:form>
                         <h:outputLabel value="Message:"/><h:inputText value="#{MessageView.message.body}"/>
                         <h:commandButton action="#{MessageView.postMessage}" value="Post Message"/>
                     </h:form>
-                    
-                    <h:form>
-			
-			<h3>
-				<h:outputText value="#{asd['text']}" />
-			</h3>
-			
-			<h:panelGrid columns="2">
-				
-				Language : 
-				<h:selectOneMenu value="#{MessageView.localeCode}" onchange="submit()"
-					valueChangeListener="#{MessageView.countryLocaleCodeChanged}">
-   					<f:selectItems value="#{MessageView.countriesInMap}" /> 
-   				</h:selectOneMenu>
 
-			</h:panelGrid>
-			
-			
-			
-		</h:form>
+                    <h:form>
+
+                        <h3>
+                            <h:outputText value="#{asd['text']}" />
+                        </h3>
+
+                        <h:panelGrid columns="2">
+
+                            Language : 
+                            <h:selectOneMenu value="#{MessageView.localeCode}" onchange="submit()"
+                                             valueChangeListener="#{MessageView.countryLocaleCodeChanged}">
+                                <f:selectItems value="#{MessageView.countriesInMap}" /> 
+                            </h:selectOneMenu>
+
+                        </h:panelGrid>
+                    </h:form>
                 </f:view>
+
+                <div class="container-fluid">
+                    <div class="span12">
+                        <table class="table">
+                            <thead>  
+                                <tr>  
+                                    <th>Student-ID</th>
+                                    <th>First Name</th>  
+                                    <th>Last Name</th>  
+                                    <th>Grade</th>
+                                    <th>Options</th>  
+                                </tr>  
+                            </thead>  
+                            <tbody>  
+                                <tr class="success">  
+                                    <td>001</td>  
+                                    <td>Rammohan </td>  
+                                    <td>Reddy</td>  
+                                    <td>A+</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ViewModal">View</button>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#UpdateModal">update</button>
+                                            <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#DeleteModal">delete</button>
+                                        </div>
+                                    </td>  
+                                </tr>  
+                                <tr class="warning">  
+                                    <td>002</td>  
+                                    <td>Smita</td>  
+                                    <td>Pallod</td>  
+                                    <td>A</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ViewModal">View</button>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#UpdateModal">update</button>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">delete</button>
+                                        </div>
+                                    </td>  
+                                </tr>  
+                                <tr class="info">  
+                                    <td>003</td>  
+                                    <td>Rabindranath</td>  
+                                    <td>Sen</td>  
+                                    <td>A+</td> 
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#ViewModal">view</button>
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#UpdateModal">update</button>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">delete</button>
+                                        </div>
+                                    </td>   
+                                </tr>  
+                            </tbody> 
+                        </table> 
+
+                    </div>
+                </div>
+
+
+
+
+
+
             </ui:define>
 
             <ui:define name="bottom">

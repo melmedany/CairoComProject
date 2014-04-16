@@ -5,9 +5,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <h:outputStylesheet library="css" name="bootstrap.css" />
+    <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Hello World!</h1>   
+        <div class="page-header">
+                    <h1>This is my First Page With Bootstrap <small>Wellcome !!!</small></h1>
+                    <button type="button" class="btn btn-danger">submit</button>
+                      <button class="btn btn-small btn-primary" type="button">Small button</button>
+                </div>
     </body>
 </html>
